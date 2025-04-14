@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Name Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Pet Name Generator</h1>
+        
+        <form id="petForm">
+            <label for="pet_type">Pet Type:</label>
+            <select id="pet_type" name="pet_type">
+                <option value="dog">Dog</option>
+                <option value="cat">Cat</option>
+            </select><br><br>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select><br><br>
+
+            <label for="personality">Personality:</label>
+            <select id="personality" name="personality">
+                <option value="playful">Playful</option>
+                <option value="calm">Calm</option>
+            </select><br><br>
+
+            <button type="submit">Generate Names</button>
+        </form>
+
+        <h2>Suggested Names:</h2>
+        <ul id="nameList"></ul>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
